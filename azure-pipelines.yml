@@ -18,7 +18,7 @@ variables:
   environmentName: 'pa200hw3wd'
 
   # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+  vmImageName: '007agemt'
 
 stages:
 - stage: Build
