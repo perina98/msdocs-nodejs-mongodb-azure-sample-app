@@ -27,7 +27,9 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      vmImage: $(vmImageName)
+      name: 007agemt
+      demands:
+        - agent.name -equals agentis
 
     steps:
     - task: NodeTool@0
@@ -62,7 +64,9 @@ stages:
     displayName: Deploy
     environment: $(environmentName)
     pool:
-      vmImage: $(vmImageName)
+      name: 007agemt
+      demands:
+        - agent.name -equals agentis
     strategy:
       runOnce:
         deploy:
